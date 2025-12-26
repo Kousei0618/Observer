@@ -1,0 +1,25 @@
+{
+  "name": "discord-conversation-density-bot",
+  "version": "1.0.0",
+  "description": "Discord サーバーの会話密度をランキング化するBot",
+  "main": "index.js",
+"scripts": {
+  "start": "node index.js",
+  "start:web": "cross-env START_WEB_SERVER=true node index.js",
+  "web": "node web/server.js",
+  "dev": "nodemon index.js"
+},
+
+  "keywords": ["discord", "bot", "ranking", "conversation"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
