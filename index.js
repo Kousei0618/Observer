@@ -213,4 +213,10 @@ process.on("SIGINT", () => {
   process.exit(0);
 });
 
+if (process.env.START_WEB_SERVER === "true") {
+  require("./web/server");
+}
+
+
 // Bot起動
+
