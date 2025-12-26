@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公開サーバー一覧 | Discord Ranking Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span>📊</span>
+          <span>Discord Ranking</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">ホーム</a>
+          <a href="servers.html">サーバー一覧</a>
+          <a href="about.html" class="btn">サーバー登録</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h1 class="section-title">公開サーバー一覧</h1>
+          <p class="section-subtitle">会話密度スコアでランキングされたDiscordサーバー</p>
+        </div>
+
+        <div id="serversContainer">
+          <div class="loading">
+            <div class="spinner"></div>
+            <p>読み込み中...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="server.js"></script>
+</body>
+</html>
