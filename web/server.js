@@ -5,7 +5,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Botが作ったDBを使う
-const db = global.db;
+const BotDatabase = require("../database");
+const db = new BotDatabase();
+
 
 if (!db) {
   console.error("❌ DBが見つかりません。Botが先に起動していません。");
@@ -52,3 +54,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌐 Web起動 http://localhost:${PORT}`);
 });
+
