@@ -1,5 +1,5 @@
+const token = process.env.TOKEN || require("./config.json").token;
 const { Client, GatewayIntentBits } = require("discord.js");
-const { token } = require("./config.json");
 const BotDatabase = require("./database");
 
 // Webサーバー起動（オプション）
@@ -215,6 +215,6 @@ process.on("SIGINT", () => {
 
 // Bot起動
 
-const token = process.env.TOKEN;
+
 
 
