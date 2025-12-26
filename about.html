@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使い方 | Discord Ranking Bot</title>
+  <link rel="stylesheet" href="C:\Users\bisma\Documents\Observer\web\public\css\style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span>📊</span>
+          <span>Discord Ranking</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">ホーム</a>
+          <a href="servers.html">サーバー一覧</a>
+          <a href="about.html">使い方</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <section class="section">
+      <div class="container-narrow">
+        <div class="text-center mb-3">
+          <h1 class="section-title">使い方</h1>
+          <p class="section-subtitle">Botをサーバーに追加するだけで自動登録</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">1. Botを招待</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            以下のリンクからBotをあなたのDiscordサーバーに招待してください。
+          </p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1453972450281783298&permissions=66560&integration_type=0&scope=bot+applications.commands" 
+             target="_blank" 
+             class="btn btn-large btn-block">
+            Botを招待する
+          </a>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">2. 会話を開始</h2>
+          <p style="color: var(--text-secondary);">
+            サーバーで会話を始めると、自動的にスコアが計算されます。<br>
+            テンポよく複数人で会話すると高スコアを獲得できます！
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">3. ランキング確認</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            Discordで <code>/ranking</code> コマンドを実行するか、<br>
+            このサイトでランキングを確認できます。
+          </p>
+          <a href="servers.html" class="btn btn-secondary btn-block">サーバー一覧を見る</a>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">スコアリングの仕組み</h2>
+          <div style="color: var(--text-secondary); line-height: 1.8;">
+            <p><strong>✅ 高評価されるもの：</strong></p>
+            <ul style="margin: 10px 0 20px 20px;">
+              <li>5秒以内の素早い返信</li>
+              <li>複数人での会話</li>
+              <li>自然な会話の流れ</li>
+            </ul>
+            
+            <p><strong>⚠️ 低評価されるもの：</strong></p>
+            <ul style="margin: 10px 0 0 20px;">
+              <li>同じ人の連続投稿</li>
+              <li>返信が遅い会話</li>
+              <li>30秒以上の間隔</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

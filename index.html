@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Ranking Bot - 会話密度ランキング</title>
+  <link rel="stylesheet" href="C:\Users\bisma\Documents\Observer\web\public\css\style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span>📊</span>
+          <span>Discord Ranking</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">ホーム</a>
+          <a href="servers.html">サーバー一覧</a>
+          <a href="about.html" class="btn">サーバー登録</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="section" style="padding-top: 80px;">
+    <div class="container">
+      <div class="text-center">
+        <h1 style="font-size: 3em; margin-bottom: 20px;">会話密度ランキング</h1>
+        <p style="font-size: 1.3em; color: var(--text-secondary); margin-bottom: 40px;">
+          Discordサーバーの会話の「質」を数値化<br>
+          単純なメッセージ数ではなく、テンポ・参加人数を考慮したスコアリング
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+          <a href="servers.html" class="btn btn-large">サーバー一覧を見る</a>
+          <a href="about.html" class="btn btn-secondary btn-large">サーバーを登録</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 統計セクション -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div class="card text-center">
+          <div style="font-size: 2.5em; font-weight: 700; margin-bottom: 10px;" id="totalGuilds">-</div>
+          <div style="color: var(--text-secondary);">参加サーバー数</div>
+        </div>
+        <div class="card text-center">
+          <div style="font-size: 2.5em; font-weight: 700; margin-bottom: 10px;" id="totalScore">-</div>
+          <div style="color: var(--text-secondary);">総スコア</div>
+        </div>
+        <div class="card text-center">
+          <div style="font-size: 2.5em; font-weight: 700; margin-bottom: 10px;" id="totalConversations">-</div>
+          <div style="color: var(--text-secondary);">完了した会話</div>
+        </div>
+        <div class="card text-center">
+          <div style="font-size: 2.5em; font-weight: 700; margin-bottom: 10px;" id="activeConversations">-</div>
+          <div style="color: var(--text-secondary);">進行中の会話</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ランキングセクション -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <h2 class="section-title">トップランキング</h2>
+        <p class="section-subtitle">会話密度スコアでランキング</p>
+      </div>
+
+      <div id="rankingContainer">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>読み込み中...</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="servers.html" class="btn btn-large">全てのサーバーを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="C:\Users\bisma\Documents\Observer\web\public\js\index.js"></script>
+</body>
+</html>
