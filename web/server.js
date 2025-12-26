@@ -1,13 +1,16 @@
 const express = require("express");
 const path = require("path");
-const BotDatabase = require("../database");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Botが作ったDBを使う
+const db = global.db;
 
-// データベース接続
-const db = new BotDatabase();
+if (!db) {
+  console.error("❌ DBが見つかりません。Botが先に起動していません。");
+}
+
 
 // 静的ファイル配信
 app.use(express.static(path.join(__dirname, "public")));
@@ -116,4 +119,5 @@ process.on("SIGINT", () => {
   db.close();
   process.exit(0);
 });
+
 
