@@ -1,10 +1,6 @@
 const Database = require("better-sqlite3");
 const path = require("path");
 
-getAllGuilds() {
-  return Object.values(this.guilds || {});
-}
-
 class BotDatabase {
   constructor(dbPath = "./data/bot.db") {
     // データフォルダがなければ作成
@@ -288,3 +284,4 @@ class BotDatabase {
 
 
 module.exports = BotDatabase;
+
