@@ -214,4 +214,5 @@ process.on("SIGINT", () => {
 });
 
 // Bot起動
-client.login(token);
+
+const token = process.env.TOKEN || require("./config.json").token;
