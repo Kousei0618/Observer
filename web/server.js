@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const BotDatabase = require("../database");
 
 const app = express();
 const PORT = process.env.PORT || 10000;
@@ -62,3 +61,4 @@ app.get("/api/stats", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌐 Web起動 http://localhost:${PORT}`);
 });
+
