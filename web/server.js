@@ -5,7 +5,13 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 // ★ Web専用DBインスタンス（これが正解）
-const db = new BotDatabase();
+const db = global.db;
+if (!db) {
+  console.error("❌ DBが見つかりません。Botが先に起動していません。");
+}
+
+// 静的ファイル
+app.use(express.static(path.join(__dirname, "public")));
 
 console.log("🌐 Webダッシュボード有効化");
 
@@ -61,4 +67,5 @@ app.get("/api/stats", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌐 Web起動 http://localhost:${PORT}`);
 });
+
 
